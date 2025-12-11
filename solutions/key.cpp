@@ -2,18 +2,17 @@
 #include <fstream>
 #include <string>
 #include <sstream>
-#include <iomanip> // Required for hex conversion
-
+#include <iomanip> 
 using namespace std;
 
 int main() {
     
-    int clue1 = 385; // Put your answer from Problem 1 here
-    int clue2 = 3; // Put your answer from Problem 2 here
-    int clue3 = 7; // Put your answer from Problem 3 here
-    // ----------------------------------------------
+    int clue1 = 385; 
+    int clue2 = 3; 
+    int clue3 = 7; 
+   
 
-    // 1. Convert Clue 1 to Hex
+  
     stringstream ss;
     ss << hex << clue1; 
     string part1 = ss.str();
@@ -24,10 +23,10 @@ int main() {
         part2 += to_string(clue2);
     }
 
-    // 3. Combine them
+    
     string finalKey = part1 + "-" + part2;
 
-    // 4. Save to final_key.txt
+  
     ofstream keyFile("final_key.txt");
     if (keyFile.is_open()) {
         keyFile << finalKey;
